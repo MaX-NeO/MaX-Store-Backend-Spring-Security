@@ -9,70 +9,71 @@ import jakarta.persistence.Id;
 public class Products {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long product_id;
-	private String product_name;
-	private String product_desc;
-	private float product_price;
-	private String product_logo_url;
-	private String product_cover_1;
-	private String product_cover_2;
-	private String product_cover_3;
-	private Long vendor_id;
+	private Long productId;
+	private String productName;
+	private String productDesc;
+	private float productPrice;
+	private String productCategory; 
+	private String productLogoUrl;
+	private String productCover1;
+	private String productCover2;
+	private String productCover3;
 	
-	public Long getProduct_id() {
-		return product_id;
+	public Long getProductId() {
+		return productId;
 	}
-	public void setProduct_id(Long product_id) {
-		this.product_id = product_id;
+	public void setProductId(Long productId) {
+		this.productId = productId;
 	}
-	public String getProduct_name() {
-		return product_name;
+	public String getProductName() {
+		return productName;
 	}
-	public void setProduct_name(String product_name) {
-		this.product_name = product_name;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
-	public String getProduct_desc() {
-		return product_desc;
+	public String getProductDesc() {
+		return productDesc;
 	}
-	public void setProduct_desc(String product_desc) {
-		this.product_desc = product_desc;
+	public void setProductDesc(String productDesc) {
+		this.productDesc = productDesc;
 	}
-	public float getProduct_price() {
-		return product_price;
+	public float getProductPrice() {
+		return productPrice;
 	}
-	public void setProduct_price(float product_price) {
-		this.product_price = product_price;
+	public void setProductPrice(float productPrice) {
+		this.productPrice = productPrice;
 	}
-	public String getProduct_logo_url() {
-		return product_logo_url;
+	public String getProductCategory() {
+		return productCategory;
 	}
-	public void setProduct_logo_url(String product_logo_url) {
-		this.product_logo_url = product_logo_url;
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
 	}
-	public String getProduct_cover_1() {
-		return product_cover_1;
+	public String getProductLogoUrl() {
+		return productLogoUrl;
 	}
-	public void setProduct_cover_1(String product_cover_1) {
-		this.product_cover_1 = product_cover_1;
+	public void setProductLogoUrl(String productLogoUrl) {
+		this.productLogoUrl = productLogoUrl;
 	}
-	public String getProduct_cover_2() {
-		return product_cover_2;
+	public String getProductCover1() {
+		return productCover1;
 	}
-	public void setProduct_cover_2(String product_cover_2) {
-		this.product_cover_2 = product_cover_2;
+	public void setProductCover1(String productCover1) {
+		this.productCover1 = productCover1;
 	}
-	public String getProduct_cover_3() {
-		return product_cover_3;
+	public String getProductCover2() {
+		return productCover2;
 	}
-	public void setProduct_cover_3(String product_cover_3) {
-		this.product_cover_3 = product_cover_3;
+	public void setProductCover2(String productCover2) {
+		this.productCover2 = productCover2;
 	}
-	public Long getVendor_id() {
-		return vendor_id;
+	public String getProductCover3() {
+		return productCover3;
 	}
-	public void setVendor_id(Long vendor_id) {
-		this.vendor_id = vendor_id;
+	public void setProductCover3(String productCover3) {
+		this.productCover3 = productCover3;
 	}
 	
-	
+
+		
 }

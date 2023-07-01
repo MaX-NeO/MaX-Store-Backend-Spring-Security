@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,7 +37,7 @@ public class AdminController {
 		String password = login.get("password");
 		return adminservice.adminLogin(username,password);
 	}
-	@PostMapping("/resetpassword")
+	@PutMapping("/resetpassword")
 	public String adminChangeStringPassword(@RequestBody Map<String, String> resetpassword) {
 		String username = resetpassword.get("username");
 		String old_password =resetpassword.get("old_password");

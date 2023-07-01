@@ -9,47 +9,41 @@ import jakarta.persistence.Id;
 public class Orders {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long order_id;
-	private String order_date;
-	private Float order_total;
-	private Boolean order_status;
-	private Long f_user_id;
-	private Long f_product_id;
+	private Long orderId;
+	private String orderDate;
+	private Float orderTotal;
+	private Boolean orderStatus;
+	private String fProductId;
 	
-	public Long getOrder_id() {
-		return order_id;
+	public Long getOrderId() {
+		return orderId;
 	}
-	public void setOrder_id(Long order_id) {
-		this.order_id = order_id;
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
 	}
-	public String getOrder_date() {
-		return order_date;
+	public String getOrderDate() {
+		return orderDate;
 	}
-	public void setOrder_date(String order_date) {
-		this.order_date = order_date;
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
 	}
-	public Float getOrder_total() {
-		return order_total;
+	public Float getOrderTotal() {
+		return orderTotal;
 	}
-	public void setOrder_total(Float order_total) {
-		this.order_total = order_total;
+	public void setOrderTotal(Float orderTotal) {
+		this.orderTotal = orderTotal;
 	}
-	public Boolean getOrder_status() {
-		return order_status;
+	public Boolean getOrderStatus() {
+		return orderStatus;
 	}
-	public void setOrder_status(Boolean order_status) {
-		this.order_status = order_status;
+	public void setOrderStatus(Boolean orderStatus) {
+		this.orderStatus = orderStatus;
 	}
-	public Long getF_user_id() {
-		return f_user_id;
+	public String getfProductId() {
+		return fProductId;
 	}
-	public void setF_user_id(Long f_user_id) {
-		this.f_user_id = f_user_id;
+	public void setfProductId(String fProductId) {
+		this.fProductId = fProductId;
 	}
-	public Long getF_product_id() {
-		return f_product_id;
-	}
-	public void setF_product_id(Long f_product_id) {
-		this.f_product_id = f_product_id;
-	}
+	
 }

@@ -32,13 +32,13 @@ public class ProductService {
 		if (productx == null) {
 			return "invalid_product";
 		} else {
-			productx.setProduct_name(product.getProduct_name());
-			productx.setProduct_price(product.getProduct_price());
-			productx.setProduct_desc(product.getProduct_desc());
-			productx.setProduct_logo_url(product.getProduct_logo_url());
-			productx.setProduct_cover_1(product.getProduct_cover_1());
-			productx.setProduct_cover_2(product.getProduct_cover_2());
-			productx.setProduct_cover_3(product.getProduct_cover_3());
+			productx.setProductName(product.getProductName());
+			productx.setProductPrice(product.getProductPrice());
+			productx.setProductDesc(product.getProductDesc());
+			productx.setProductLogoUrl(product.getProductLogoUrl());
+			productx.setProductCover1(product.getProductCover1());
+			productx.setProductCover2(product.getProductCover2());
+			productx.setProductCover3(product.getProductCover3());
 			productrepo.saveAndFlush(productx);
 			return "product_edited";
 		}

@@ -1,18 +1,19 @@
 package com.max.store.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.max.store.models.Users;
-import com.max.store.repos.UsersRepo;
+import com.max.store.repos.UserRepo;
 
 @Service
 public class UserService {
 
 	@Autowired
-	private UsersRepo usersrepo;
+	private UserRepo usersrepo;
 
 	public List<Users> getUsers() {
 		return usersrepo.findAll();
@@ -21,7 +22,9 @@ public class UserService {
 	public Users addUser(Users user) {
 		return usersrepo.save(user);
 	}
-
+	public Optional<Users> finduserbyId(Long id) {
+		return usersrepo.findById(id);
+	}
 	public String loginUser(String email, String password) {
 		Users user = usersrepo.findByUserEmail(email);
 		if (user == null) {

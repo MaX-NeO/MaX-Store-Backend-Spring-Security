@@ -2,6 +2,7 @@ package com.max.store.controllers;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,6 +28,10 @@ public class UsersController {
 	public List<Users> Getusers() {
 		return userservice.getUsers();
 	}
+	@GetMapping("/find/{id}")
+	public Optional<Users> FindUserByID(@PathVariable Long id){
+		return userservice.finduserbyId(id);
+	}
 	@PostMapping("/add")
 	public Users AddUser(@RequestBody Users user) {
 		return userservice.addUser(user);
@@ -44,11 +49,11 @@ public class UsersController {
 		String new_password=resetpassword.get("new_password");
 		return userservice.resetPassword(email, old_password, new_password);
 	}
-	@PutMapping("/edituser/{id}")
+	@PutMapping("/edit/{id}")
 	public String EditUser(@PathVariable Long id, @RequestBody Users user) {
 		return userservice.editUser(user, id);
 	}
-	@DeleteMapping("/deleteuser/{id}")
+	@DeleteMapping("/delete/{id}")
 	public String DeleteUser(@PathVariable Long id) {
 		return userservice.deleteUser(id);
 	}

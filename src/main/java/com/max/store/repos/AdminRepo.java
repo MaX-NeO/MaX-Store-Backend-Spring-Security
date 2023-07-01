@@ -6,6 +6,6 @@ import com.max.store.models.Admins;
 
 public interface AdminRepo extends JpaRepository<Admins, Long> {
 
-	Admins findByusername(String username);
+//	Admins findByusername(String username);
 
 }

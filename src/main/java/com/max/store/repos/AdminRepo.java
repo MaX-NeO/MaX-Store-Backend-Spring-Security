@@ -5,7 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.max.store.models.Admins;
 
 public interface AdminRepo extends JpaRepository<Admins, Long> {
-
-//	Admins findByusername(String username);
-
+    Admins findByAdminUsername(String adminUsername);
 }

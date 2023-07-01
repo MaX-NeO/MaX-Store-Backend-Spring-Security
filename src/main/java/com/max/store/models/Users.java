@@ -9,56 +9,67 @@ import jakarta.persistence.Id;
 public class Users {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long user_id;
-	private String user_firstname;
-	private String user_lastname;
-	private String user_email;
-	private Long user_phone;
-	private String user_passwrod;
-	private String user_address;
+	private Long userId;
+	private String userFirstname;
+	private String userLastname;
+	private String userEmail;
+	private Long userPhone;
+	private String userPasswrod;
+	private String userAddress;
+	private String userCart;
 	
-	public Long getUser_id() {
-		return user_id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
-	public String getUser_firstname() {
-		return user_firstname;
+	public String getUserFirstname() {
+		return userFirstname;
 	}
-	public void setUser_firstname(String user_firstname) {
-		this.user_firstname = user_firstname;
+	public void setUserFirstname(String userFirstname) {
+		this.userFirstname = userFirstname;
 	}
-	public String getUser_lastname() {
-		return user_lastname;
+	public String getUserLastname() {
+		return userLastname;
 	}
-	public void setUser_lastname(String user_lastname) {
-		this.user_lastname = user_lastname;
+	public void setUserLastname(String userLastname) {
+		this.userLastname = userLastname;
 	}
-	public String getUser_email() {
-		return user_email;
+	public String getUserEmail() {
+		return userEmail;
 	}
-	public void setUser_email(String user_email) {
-		this.user_email = user_email;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
-	public Long getUser_phone() {
-		return user_phone;
+	public Long getUserPhone() {
+		return userPhone;
 	}
-	public void setUser_phone(Long user_phone) {
-		this.user_phone = user_phone;
+	public void setUserPhone(Long userPhone) {
+		this.userPhone = userPhone;
 	}
-	public String getUser_passwrod() {
-		return user_passwrod;
+	public String getUserPasswrod() {
+		return userPasswrod;
 	}
-	public void setUser_passwrod(String user_passwrod) {
-		this.user_passwrod = user_passwrod;
+	public void setUserPasswrod(String userPasswrod) {
+		this.userPasswrod = userPasswrod;
 	}
-	public String getUser_address() {
-		return user_address;
+	public String getUserAddress() {
+		return userAddress;
 	}
-	public void setUser_address(String user_address) {
-		this.user_address = user_address;
+	public void setUserAddress(String userAddress) {
+		this.userAddress = userAddress;
 	}
+	public String getUserCart() {
+		return userCart;
+	}
+	public void setUserCart(String userCart) {
+		this.userCart = userCart;
+	}
+	
+
+
+
 	
 	
 }

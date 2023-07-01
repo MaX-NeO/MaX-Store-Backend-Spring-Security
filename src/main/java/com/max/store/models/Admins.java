@@ -9,33 +9,30 @@ import jakarta.persistence.Id;
 public class Admins {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long admin_id;
-private String admin_username;
-private String admin_password;
-private int admin_type;
+private Long adminId;
+private String adminUsername;
+private String adminPassword;
+private int adminType;
 
-public Long getAdmin_id() {
-	return admin_id;
+public String getAdminUsername() {
+	return adminUsername;
 }
-public void setAdmin_id(Long admin_id) {
-	this.admin_id = admin_id;
+public void setAdminUsername(String adminUsername) {
+	this.adminUsername = adminUsername;
 }
-public String getAdmin_username() {
-	return admin_username;
+public String getAdminPassword() {
+	return adminPassword;
 }
-public void setAdmin_username(String admin_username) {
-	this.admin_username = admin_username;
+public void setAdminPassword(String adminPassword) {
+	this.adminPassword = adminPassword;
 }
-public String getAdmin_password() {
-	return admin_password;
+public int getAdminType() {
+	return adminType;
 }
-public void setAdmin_password(String admin_password) {
-	this.admin_password = admin_password;
+public void setAdminType(int adminType) {
+	this.adminType = adminType;
 }
-public int getAdmin_type() {
-	return admin_type;
-}
-public void setAdmin_type(int admin_type) {
-	this.admin_type = admin_type;
-}
+
+
+
 }

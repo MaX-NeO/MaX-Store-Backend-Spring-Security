@@ -6,4 +6,6 @@ import com.max.store.models.Users;
 
 public interface UsersRepo extends JpaRepository<Users, Long> {
 
+	Users findByUserEmail(String email);
+
 }

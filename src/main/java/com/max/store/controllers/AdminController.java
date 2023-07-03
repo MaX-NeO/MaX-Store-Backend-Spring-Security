@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 //import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,10 @@ import com.max.store.services.AdminService;
 
 @RestController
 @RequestMapping("/admin")
-//@CrossOrigin("*")
+@CrossOrigin(
+        origins = "http://localhost:8081",
+        allowedHeaders = {"x-auth-token", "x-requested-with", "x-xsrf-token"}
+)
 public class AdminController {
 	@Autowired
 	private AdminService adminservice;

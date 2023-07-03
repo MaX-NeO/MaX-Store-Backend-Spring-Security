@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,10 @@ import com.max.store.models.Products;
 import com.max.store.services.ProductService;
 
 @RestController
-//@CrossOrigin("*")
+@CrossOrigin(
+        origins = "http://localhost:8081",
+        allowedHeaders = {"x-auth-token", "x-requested-with", "x-xsrf-token"}
+)
 @RequestMapping("/product")
 public class ProductController {
 
